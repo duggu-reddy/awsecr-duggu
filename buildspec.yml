@@ -16,5 +16,4 @@ phases:
     commands:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
-      - aws ecr get-login --region us-west-2
       - docker push 802878444238.dkr.ecr.us-west-2.amazonaws.com/poc-cicd-repository:latest
