@@ -7,8 +7,8 @@ phases:
     commands:
       - curl -O https://bootstrap.pypa.io/get-pip.py
       - python get-pip.py --user
-      - export PATH=~/.local/bin:$PATH
-      - source ~/.bash_profile
+      - echo "export PATH=~/.local/bin:$PATH" >> ~/.profile
+      - source ~/.profile
       - echo PIP version `pip --version`
       - pip install awscli --upgrade --user
       - echo awscli installed and version `aws --version`
