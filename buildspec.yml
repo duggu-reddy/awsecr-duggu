@@ -10,7 +10,6 @@ phases:
   build:
     commands:
       - echo build Docker image on `date`
-      - cd /root/duggun/awsecr-duggu/
       - docker build -t 802878444238.dkr.ecr.us-west-2.amazonaws.com/poc-cicd-repository:latest .
   post_build:
     commands:
