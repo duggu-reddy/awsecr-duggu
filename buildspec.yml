@@ -5,8 +5,6 @@ phases:
       - echo install step...
   pre_build:
     commands:
-      - curl -O https://bootstrap.pypa.io/get-pip.py
-      - python get-pip.py --user
       - echo "export PATH=~/.local/bin:$PATH" >> ~/.profile
       - source ~/.profile
       - echo PIP version `pip --version`
