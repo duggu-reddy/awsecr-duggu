@@ -5,8 +5,15 @@ phases:
       - echo install step...
   pre_build:
     commands:
+      - curl -O https://bootstrap.pypa.io/get-pip.py
+      - python get-pip.py --user
+      - export PATH=~/.local/bin:$PATH
+      - source ~/.bash_profile
+      - echo PIP version `pip --version`
+      - pip install awscli --upgrade --user
+      - echo awscli installed and version `aws --version`
       - echo logging in to AWS ECR...
-      - eval $(aws ecr get-login --region us-west-2)
+      - aws ecr get-login --region us-west-2
   build:
     commands:
       - echo build Docker image on `date`
