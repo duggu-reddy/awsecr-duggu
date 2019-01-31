@@ -6,7 +6,7 @@ phases:
   pre_build:
     commands:
       - echo awscli installed and version `aws --version`
-      - echo logging in to AWS ECR...
+      - echo logging in to AWS ECR..
       - $(aws ecr get-login --no-include-email --region us-west-2)
       - REPOSITORY_URI=802878444238.dkr.ecr.us-west-2.amazonaws.com/poc-cicd-repository
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
