@@ -1,0 +1,70 @@
+{
+	"Parameters": {
+		"Cluster": {
+			"Type": "String"
+		},
+		"DesiredCount": {
+			"Type": "String"
+		},
+		"Role": {
+			"Type": "String"
+		},
+		"TargetGroupArn": {
+			"Type": "String"
+		},
+		"Image": {
+			"Type": "String"
+		}
+	},
+	"Resources": {
+		"Services": {
+			"Type": "AWS::ECS::Service",
+			"Properties": {
+				"Cluster": null,
+				"DesiredCount": 2,
+				"NetworkConfiguration": {
+					"AwsvpcConfiguration": {
+						"AssignPublicIp": "ENABLED",
+						"Subnets": [
+							"subnet-18acc844"
+						]
+					}
+				},
+				"TaskDefinition": null,
+				"LaunchType": "FARGATE",
+				"LoadBalancers": [
+					{
+						"ContainerName": "node",
+						"ContainerPort": 80,
+						"TargetGroupArn": null
+					}
+				]
+			}
+		},
+		"TaskDefinition": {
+			"Type": "AWS::ECS::TaskDefinition",
+			"Properties": {
+				"Family": "Service",
+				"Cpu": 256,
+				"Memory": 512,
+				"NetworkMode": "awsvpc",
+				"ExecutionRoleArn": null,
+				"RequiresCompatibilities": [
+					"FARGATE"
+				],
+				"ContainerDefinitions": [
+					{
+						"Name": "node",
+						"Image": null,
+						"Memory": 512,
+						"PortMappings": [
+							{
+								"ContainerPort": 80
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}
