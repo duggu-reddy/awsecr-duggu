@@ -1,0 +1,11 @@
+{
+  "Parameters": {
+     "Cluster": "MyCluster",
+     "DesiredCount": "2",
+     "Role": "ecsTaskExecutionRole",
+     "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:466750394729:targetgroup/Testtt/471392b11dc58353",
+     "Image": {
+        "Fn::GetParam": ["BuildArtifact", "build.json", "image"]
+              }
+    }
+}
