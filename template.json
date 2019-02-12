@@ -26,7 +26,7 @@
 					"AwsvpcConfiguration": {
 						"AssignPublicIp": "ENABLED",
 						"Subnets": [
-							"subnet-18acc844"
+							"subnet-09f220c0a8c063d85"
 						]
 					}
 				},
