@@ -4,6 +4,5 @@
      "DesiredCount": "2",
      "Role": "ecsTaskExecutionRole",
      "TargetGroupArn": "arn:aws:elasticloadbalancing:us-west-2:802878444238:loadbalancer/app/ext-poc-container-alb/ad08ee3b17e9db16",
-     "Image": { "Fn::GetParam": ["BuildArtifact", "build.json", "Image"]}
-    }
+     "Image": "httpd-containers"
 }
