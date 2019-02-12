@@ -20,7 +20,7 @@
 		"Services": {
 			"Type": "AWS::ECS::Service",
 			"Properties": {
-				"Cluster": null,
+				"Cluster": { "Ref" : "Cluster" },
 				"DesiredCount": 2,
 				"NetworkConfiguration": {
 					"AwsvpcConfiguration": {
@@ -30,13 +30,13 @@
 						]
 					}
 				},
-				"TaskDefinition": null,
+				"TaskDefinition": {"Ref":"TaskDefinition"},
 				"LaunchType": "FARGATE",
 				"LoadBalancers": [
 					{
 						"ContainerName": "node",
 						"ContainerPort": 80,
-						"TargetGroupArn": null
+						"TargetGroupArn": { "Ref" : "TargetGroupArn"}
 					}
 				]
 			}
@@ -48,14 +48,14 @@
 				"Cpu": 256,
 				"Memory": 512,
 				"NetworkMode": "awsvpc",
-				"ExecutionRoleArn": null,
+				"ExecutionRoleArn": {"Ref" : "Role"},
 				"RequiresCompatibilities": [
 					"FARGATE"
 				],
 				"ContainerDefinitions": [
 					{
 						"Name": "node",
-						"Image": null,
+						"Image": { "Ref" : "Image"},
 						"Memory": 512,
 						"PortMappings": [
 							{

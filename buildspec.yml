@@ -27,7 +27,7 @@ phases:
 artifacts:
     files: 
       - imagedefinitions.json
-      - Test.json
-      - PipeTemplate.yml
+      - configuration.json
+      - template.json
     name: myname
     discard-paths: yes
