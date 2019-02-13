@@ -1,24 +1,19 @@
 {
 	"Parameters": {
 		"Cluster": {
-			"Type": "String",
-			"Default": "poc-cicd-containers"
+			"Type": "String"
 		},
 		"DesiredCount": {
-			"Type": "String",
-			"Default": "2"
+			"Type": "String"
 		},
 		"Role": {
-			"Type": "String",
-			"Default": "ecsTaskExecutionRole"
+			"Type": "String"
 		},
 		"TargetGroupArn": {
-			"Type": "String",
-			"Default": "arn:aws:elasticloadbalancing:us-west-2:802878444238:loadbalancer/app/ext-poc-container-alb/ad08ee3b17e9db16"
+			"Type": "String"
 		},
 		"Image": {
-			"Type": "String",
-			"Default": "node"
+			"Type": "String"
 		}
 	},
 	"Resources": {
