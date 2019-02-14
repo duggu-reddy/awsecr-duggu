@@ -44,14 +44,7 @@
 		"TaskDefinition": {
 			"Type": "AWS::ECS::TaskDefinition",
 			"Properties": {
-				"Family": "Service",
-				"Cpu": 256,
-				"Memory": 512,
-				"NetworkMode": "bridge",
 				"ExecutionRoleArn": {"Ref" : "Role"},
-				"RequiresCompatibilities": [
-					"EC2"
-				],
 				"ContainerDefinitions": [
 					{
 						"Name": "node",
