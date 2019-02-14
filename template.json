@@ -22,14 +22,6 @@
 			"Properties": {
 				"Cluster": { "Ref" : "Cluster" },
 				"DesiredCount": 2,
-				"NetworkConfiguration": {
-					"AwsvpcConfiguration": {
-						"AssignPublicIp": "ENABLED",
-						"Subnets": [
-							"subnet-09f220c0a8c063d85"
-						]
-					}
-				},
 				"TaskDefinition": {"Ref":"TaskDefinition"},
 				"LaunchType": "EC2",
 				"LoadBalancers": [
