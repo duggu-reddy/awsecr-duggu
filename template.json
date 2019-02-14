@@ -21,7 +21,7 @@
 			"Type": "AWS::ECS::Service",
 			"Properties": {
 				"Cluster": { "Ref" : "Cluster" },
-				"DesiredCount": 2,
+				"DesiredCount": 1,
 				"TaskDefinition": {"Ref":"TaskDefinition"},
 				"LaunchType": "EC2",
 				"LoadBalancers": [

@@ -1,7 +1,7 @@
 {
   "Parameters": {
      "Cluster": "poc-cicd-containers",
-     "DesiredCount": "2",
+     "DesiredCount": "1",
      "Role": "ecsTaskExecutionRole",
      "TargetGroupArn": "arn:aws:elasticloadbalancing:us-west-2:802878444238:targetgroup/tg-poc-containers/d1829fb7f7e4698c",
      "Image": {
