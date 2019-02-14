@@ -41,7 +41,7 @@
 					{
 						"Name": "node",
 						"Image": { "Ref" : "Image"},
-						"Memory": 512,
+						"Memory": 200,
 						"PortMappings": [
 							{
 								"ContainerPort": 80
