@@ -31,7 +31,7 @@
 					}
 				},
 				"TaskDefinition": {"Ref":"TaskDefinition"},
-				"LaunchType": "FARGATE",
+				"LaunchType": "EC2",
 				"LoadBalancers": [
 					{
 						"ContainerName": "node",
@@ -47,10 +47,10 @@
 				"Family": "Service",
 				"Cpu": 256,
 				"Memory": 512,
-				"NetworkMode": "awsvpc",
+				"NetworkMode": "bridge",
 				"ExecutionRoleArn": {"Ref" : "Role"},
 				"RequiresCompatibilities": [
-					"FARGATE"
+					"EC2"
 				],
 				"ContainerDefinitions": [
 					{
