@@ -3,7 +3,7 @@
      "Cluster": "poc-cicd-containers",
      "DesiredCount": "2",
      "Role": "ecsTaskExecutionRole",
-     "TargetGroupArn": "arn:aws:elasticloadbalancing:us-west-2:802878444238:loadbalancer/app/ext-poc-container-alb/ad08ee3b17e9db16",
+     "TargetGroupArn": "arn:aws:elasticloadbalancing:us-west-2:802878444238:targetgroup/tg-poc-containers/d1829fb7f7e4698c",
      "Image": {
         "Fn::GetParam": ["BuildArtifact", "build.json", "imageUri"]
               }
